@@ -14,10 +14,10 @@ int main() {
     }
 
     // Tinh tong cac chu so
-    hangNghin = so / 1000;       // Lấy chữ số hàng nghìn
-    hangTram = (so / 100) % 10; // Lấy chữ số hàng trăm
-    hangChuc = (so / 10) % 10;  // Lấy chữ số hàng chục
-    hangDonVi = so % 10;        // Lấy chữ số hàng đơn vị
+    hangNghin = so / 1000;       // Lay chu so hang nghin
+    hangTram = (so / 100) % 10; // Lay chu so hang tram
+    hangChuc = (so / 10) % 10;  // Lay chu so hang chuc
+    hangDonVi = so % 10;        // Lay chu so hang đon vi
 
     tongChuSo = hangNghin + hangTram + hangChuc + hangDonVi;
 
