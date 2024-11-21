@@ -1,17 +1,18 @@
 #include <stdio.h>
-#include <string.h>
 
 int main() {
     char name[50];
-
+    int len = 0;
     printf("Vui long nhap ten cua ban: ");
     fgets(name, sizeof(name), stdin);
-
-    size_t len = strlen(name); // Tinh do dai chuoi
-    if (len > 0 && name[len - 1] == '\n') {
-        name[len - 1] = '\0'; // Loai bo ky tu '\n'
+    // Tinh do dai chuoi va loai bo ky tu '\n'
+    while (name[len] != '\0') {
+        if (name[len] == '\n') {
+            name[len] = '\0'; // Loai bo ky tu '\n'
+            break;
+        }
+        len++;
     }
-
     printf("Xin chao, %s!\n", name);
     return 0;
 }
