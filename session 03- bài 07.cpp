@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int so, tongChuSo;
+    int so, tongChuSo, hangNghin, hangTram, hangChuc, hangDonVi;
 
     // Nhap so nguyen 4 chu so
     printf("Nhap mot so nguyen co 4 chu so: ");
@@ -14,11 +14,12 @@ int main() {
     }
 
     // Tinh tong cac chu so
-    tongChuSo = 0;
-    while (so != 0) {
-        tongChuSo += so % 10;  // Lay chu so cuoi cung va cong vao tong
-        so /= 10;  // Bo chu so cuoi cung
-    }
+    hangNghin = so / 1000;       // Lấy chữ số hàng nghìn
+    hangTram = (so / 100) % 10; // Lấy chữ số hàng trăm
+    hangChuc = (so / 10) % 10;  // Lấy chữ số hàng chục
+    hangDonVi = so % 10;        // Lấy chữ số hàng đơn vị
+
+    tongChuSo = hangNghin + hangTram + hangChuc + hangDonVi;
 
     // In ket qua
     printf("Tong cac chu so la: %d\n", tongChuSo);
